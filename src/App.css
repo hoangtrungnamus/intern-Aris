@@ -79,9 +79,11 @@ tr{
 
 .time, .place, .date{
     margin: 0 10px 0 10px;
+    text-align: center;
 }
 
 .do{
+   padding-left: 10px;
    width: 100%;
    margin-bottom: 3vh;
    margin-top: 20px;

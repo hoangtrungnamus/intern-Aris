@@ -17,7 +17,7 @@ export const TodoItem = (props) => {
     
     return (
         <tr>
-            <td>{props.do}</td>
+            <td>{props.does}</td>
             <td>{props.date} {props.time}</td>
             <td>{props.place} {props.id}</td>
             <td>

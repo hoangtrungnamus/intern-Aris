@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import { TodoContext } from './TodoContext';
 import TodoItem from './TodoItem';
 
-const TodoTable = (props) => {
+const TodoTable = () => {
 
-  const { todos, setTodos } = useContext(TodoContext);
+  const { todos } = useContext(TodoContext);
  
   return (
     <div>
@@ -39,7 +39,7 @@ const TodoTable = (props) => {
                   todo.do && (<TodoItem
                     key={index}
                     id={todo.id}
-                    do={todo.do}
+                    does={todo.does}
                     time={todo.time}
                     date={todo.date}
                     place={todo.place}
