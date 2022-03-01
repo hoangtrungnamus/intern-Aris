@@ -5,13 +5,7 @@ import TodoItem from './TodoItem';
 const TodoTable = (props) => {
 
   const { todos, setTodos } = useContext(TodoContext);
-  const deleteItem = () =>{
-        const newTodos = todos.filter(todo => {
-            return todo.id != props.id;
-        })
-        setTodos([newTodos]);
-    }
-
+ 
   return (
     <div>
       <div className='family'>
@@ -49,7 +43,6 @@ const TodoTable = (props) => {
                     time={todo.time}
                     date={todo.date}
                     place={todo.place}
-                    del={deleteItem}
                   >
                   </TodoItem>)
                 )

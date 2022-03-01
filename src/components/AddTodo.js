@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { TodoContext } from './TodoContext';
-import nextId from "react-id-generator";
+import { v4 as uuidv4 } from 'uuid'
 
 const AddTodo = () => {
     const { todos, setTodos } = useContext(TodoContext);
     const [newTodo, setNewTodo] = useState({
-        id: "",
+        id: uuidv4().toString(),
         do: "",
         time: "",
         date: "",
@@ -26,6 +26,7 @@ const AddTodo = () => {
 
     function addTodo(e) {
         e.preventDefault();
+        setNewTodo({...newTodo, id: uuidv4().toString()})
         if (checkValid()) {
             if(!todos[0]){
                 setTodos([newTodo]);
@@ -34,6 +35,7 @@ const AddTodo = () => {
             setTodos([...todos, newTodo]);
            }
         }
+        console.log(newTodo);
     }
 
     return (

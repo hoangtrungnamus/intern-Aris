@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import {TodoContext} from './TodoContext';
 
 export const TodoItem = (props) => {
-
+    const {deleteItem} = useContext(TodoContext);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        
+        setShow(true);console.log(props.id)};
 
+    function deleteTodoItem(){
+        deleteItem(props.id);
+    }
     
-
     return (
         <tr>
             <td>{props.do}</td>
@@ -29,7 +34,7 @@ export const TodoItem = (props) => {
                     <Button variant="secondary" className="btnModal" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" className="btnModal" onClick={props.del}>
+                    <Button variant="primary" className="btnModal" onClick={deleteTodoItem}>
                         Delete
                     </Button>
                 </Modal.Footer>
