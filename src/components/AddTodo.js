@@ -1,0 +1,59 @@
+import React, { useState, useContext } from 'react';
+import { TodoContext } from './TodoContext';
+import nextId from "react-id-generator";
+
+const AddTodo = () => {
+    const { todos, setTodos } = useContext(TodoContext);
+    const [newTodo, setNewTodo] = useState({
+        id: "",
+        do: "",
+        time: "",
+        date: "",
+        place: ""
+    })
+
+    function onChangeToDoForm(e) {
+        setNewTodo({...newTodo, [e.target.name]: e.target.value});
+    }
+
+
+    function checkValid() {
+        if (!newTodo.do || !newTodo.time || !newTodo.date || !newTodo.place) {
+            return false;
+        }
+        return true;
+    }
+
+    function addTodo(e) {
+        e.preventDefault();
+        if (checkValid()) {
+            if(!todos[0]){
+                setTodos([newTodo]);
+            }
+           else{
+            setTodos([...todos, newTodo]);
+           }
+        }
+    }
+
+    return (
+        <div className='add'>
+            <form>
+                <div className='tbname'>Add Todo</div>
+                <div className='addDo'>
+                    <textarea onChange={onChangeToDoForm} placeholder='Add any thing' className='do' name="do" />
+                </div>
+                <div className='addTime'>
+                    <input onChange={onChangeToDoForm} type='time' placeholder='Add any thing' className='time' name="time" />
+                    <input onChange={onChangeToDoForm} type='date' placeholder='Add any thing' className='date' name="date" />
+                    <input onChange={onChangeToDoForm} placeholder='Add any thing' className='place' name="place" />
+                </div>
+                <div>
+                    <button type='submit' onClick={addTodo} className='btn btn-primary'>Submit</button>
+                </div>
+            </form>
+        </div>
+    )
+}
+
+export default AddTodo;

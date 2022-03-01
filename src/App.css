@@ -1,0 +1,156 @@
+body{
+    background: url('./assets/bg.jpg') no-repeat center/cover;
+    height: 100vh;
+}
+
+*{
+  margin: 0;
+  padding: 0;  
+}
+
+.code{
+    position: relative;
+    width: 100px;
+    left: 70%;
+}
+
+table, th, td{
+    border: 3px solid rgb(113, 234, 243);
+    color: rgb(190, 236, 250);
+    border-collapse: collapse;
+}
+
+table{
+    position: absolute;
+}
+
+th{
+    font-size: 1.5em;
+    padding: 0 30px 0 30px;
+}
+
+tr{
+    font-size: 1em;
+}
+
+.todoapp{
+    font-size: 4em;
+    color: rgb(42, 116, 226);
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    left: 43%;
+    margin-bottom: 1em;
+}
+
+.family{
+    position: relative;
+    left: 40%;
+}
+
+.office{
+    position: relative;
+    left: 38%;
+}
+
+.others{
+    position: relative;
+    left: 68%;
+}
+
+.add{
+        position: relative;
+        top: 50%;
+        margin-top: 490px;
+        border: 3px solid white;
+        width: 50%;
+        align-items: center;
+        left: 8%;
+        border-radius: 10px;
+    }
+
+.do, .time, .place, .date{
+    font-size: 1em;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+}
+
+.do{
+   position: relative;
+   width: 40%;
+   left: 29%;
+   margin-bottom: 3vh;
+   margin-top: 20px;
+}
+
+.time{
+    left: 15%;
+    margin-bottom: 3%;
+}
+
+.date{
+    left: 25%;
+    margin-bottom: 3%;
+}
+
+.place{
+    left: 35%;
+    margin-bottom: 3%;
+}
+
+.tbname{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.btn{
+    padding: 10px;
+    border: 1px solid aqua;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    color: aqua;
+    position: relative;
+    left: 42%;
+    width: 150px;
+    margin-bottom: 2%;
+}
+
+.btn:active{
+    background-color: aqua;
+    color: white;
+}
+
+th, td{
+    text-align: center;
+}
+
+td{
+    padding: 0 5px 0 5px;
+}
+
+.btn-mod{
+    background-color: red;
+    border: 1px solid white;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    position: relative;
+    margin: 5px 0 5px 0;
+}
+
+.btn-mod:active{
+    background-color: white;
+    color: red;
+}
+
+.btnModal{
+    position: relative;
+    left: 0%;
+}
