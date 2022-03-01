@@ -50,7 +50,7 @@ const AddTodo = () => {
                     <input onChange={onChangeToDoForm} type='date' placeholder='Add any thing' className='date' name="date" />
                     <input onChange={onChangeToDoForm} placeholder='Add any thing' className='place' name="place" />
                 </div>
-                <div>
+                <div className='btn-add'>
                     <button type='submit' onClick={addTodo} className='btn btn-primary'>Submit</button>
                 </div>
             </form>

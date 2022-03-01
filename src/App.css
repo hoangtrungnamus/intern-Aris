@@ -1,5 +1,5 @@
 body{
-    background: url('./assets/bg.jpg') no-repeat center center/cover;
+    background: url('./assets/bg.jpg') no-repeat center/cover;
     height: 100vh;
 }
 
@@ -21,7 +21,7 @@ table, th, td{
 }
 
 table{
-    position: relative;
+    position: absolute;
 }
 
 th{
@@ -37,15 +37,13 @@ tr{
     font-size: 4em;
     color: rgb(42, 116, 226);
     font-weight: bold;
-    position: relative;
-    top: 50%;
-    left: 43%;
+    text-align: center;
     margin-bottom: 1em;
 }
 
 .family{
-    position: relative;
-    left: 40%;
+    display: flex;
+    justify-content: center;
 }
 
 .office{
@@ -59,47 +57,36 @@ tr{
 }
 
 .add{
-        position: relative;
-        top: 50%;
-        margin-top: 490px;
+        margin-top: 25%;
         border: 3px solid white;
-        width: 50%;
+        width: 40%;
+        padding: 10px;
         align-items: center;
-        left: 8%;
         border-radius: 10px;
+        display: grid;
+        margin-left: 5%;
+        justify-content: center;
+
     }
+
 
 .do, .time, .place, .date{
     font-size: 1em;
-    padding: 10px;
     outline: none;
     border: none;
     border-radius: 3px;
-    position: relative;
+}
+
+.time, .place, .date{
+    margin: 0 10px 0 10px;
 }
 
 .do{
-   position: relative;
-   width: 40%;
-   left: 29%;
+   width: 100%;
    margin-bottom: 3vh;
    margin-top: 20px;
 }
 
-.time{
-    left: 15%;
-    margin-bottom: 3%;
-}
-
-.date{
-    left: 25%;
-    margin-bottom: 3%;
-}
-
-.place{
-    left: 35%;
-    margin-bottom: 3%;
-}
 
 .tbname{
     color: white;
@@ -110,15 +97,14 @@ tr{
 }
 
 .btn{
+    margin-top: 30px;
     padding: 10px;
     border: 1px solid aqua;
     font-size: 1em;
     font-weight: bold;
     border-radius: 10px;
     color: aqua;
-    position: relative;
-    left: 42%;
-    width: 150px;
+    width: 30%;
     margin-bottom: 2%;
 }
 
@@ -153,4 +139,9 @@ td{
 .btnModal{
     position: relative;
     left: 0%;
+}
+
+.btn-add{
+    display: flex;
+    justify-content: center;
 }
