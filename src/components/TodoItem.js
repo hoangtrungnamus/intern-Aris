@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 import { TodoContext } from "./TodoContext";
 
 export const TodoItem = (props) => {
-  const { deleteItem } = useContext(TodoContext);
+  const { deleteItem, getItem } = useContext(TodoContext);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -11,10 +11,42 @@ export const TodoItem = (props) => {
     setShow(true);
   };
 
+  const [showEdit, setShowEdit] = useState(false);
+
+  const [editForm, setEditForm] = useState({
+    does: "",
+    time: "",
+    date: "",
+    place: "",
+  });
+
+  const { does, time, date, place } = editForm;
+
+  const handleCloseEdit = () => setShowEdit(false);
+  const handleShowEdit = () => {
+    const res = getItem(props.id);
+    setEditForm(res);
+    console.log(does, time, date, place);
+    setShowEdit(true);
+  };
+
   function deleteTodoItem() {
-    console.log(props.id);
     deleteItem(props.id);
     handleClose();
+  }
+
+  function editTodoItem() {
+    handleCloseEdit();
+  }
+
+  function onChangeEditForm(event) {
+    const newObj = {
+      does: event.target.value,
+      time: event.target.value,
+      date: event.target.value,
+      place: event.target.value,
+    };
+    console.log(newObj);
   }
 
   return (
@@ -25,7 +57,10 @@ export const TodoItem = (props) => {
       </td>
       <td>{props.place}</td>
       <td>
-        <button onClick={handleShow} className="btn-mod">
+        <button onClick={handleShowEdit} className="btn-mod">
+          Edit
+        </button>
+        <button onClick={handleShow} className="btn-del">
           Delete
         </button>
       </td>
@@ -48,6 +83,53 @@ export const TodoItem = (props) => {
             onClick={deleteTodoItem}
           >
             Delete
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showEdit} onHide={handleCloseEdit}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form.Control
+            onChange={onChangeEditForm}
+            type="text"
+            name="does-edit"
+            value={does}
+          />
+          <br />
+          <div className="time-date-form-edit">
+            <Form.Control
+              onChange={onChangeEditForm}
+              className="time-edit"
+              type="time"
+              name="time-edit"
+              value={time}
+            />
+            <Form.Control
+              onChange={onChangeEditForm}
+              className="date-edit"
+              type="date"
+              name="date-edit"
+              value={date}
+            />
+          </div>
+          <br />
+          <Form.Control
+            onChange={onChangeEditForm}
+            type="text"
+            name="place-edit"
+            value={place}
+          />
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseEdit}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={editTodoItem}>
+            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>

@@ -1,149 +1,180 @@
-body{
-    background: url('./assets/bg.jpg') no-repeat center/cover;
-    height: 100vh;
+body {
+  background: url("./assets/bg.jpg") no-repeat center/cover;
+  height: 100vh;
 }
 
-*{
+* {
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
 
-.code{
-    position: relative;
-    width: 100px;
-    left: 70%;
+.code {
+  position: relative;
+  width: 100px;
+  left: 70%;
 }
 
-table, th, td{
-    border: 3px solid rgb(113, 234, 243);
-    color: rgb(190, 236, 250);
-    border-collapse: collapse;
+table,
+th,
+td {
+  border: 3px solid rgb(113, 234, 243);
+  color: rgb(190, 236, 250);
+  border-collapse: collapse;
 }
 
-table{
-    position: absolute;
+table {
+  position: absolute;
 }
 
-th{
-    font-size: 1.5em;
-    padding: 0 30px 0 30px;
+th {
+  font-size: 1.5em;
+  padding: 0 30px 0 30px;
 }
 
-tr{
-    font-size: 1em;
+tr {
+  font-size: 1em;
 }
 
-.todoapp{
-    font-size: 4em;
-    color: rgb(42, 116, 226);
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1em;
+.todoapp {
+  font-size: 4em;
+  color: rgb(42, 116, 226);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
-.family{
-    display: flex;
-    justify-content: center;
+.family {
+  display: flex;
+  justify-content: center;
 }
 
-.office{
-    position: relative;
-    left: 38%;
+.office {
+  position: relative;
+  left: 38%;
 }
 
-.others{
-    position: relative;
-    left: 68%;
+.others {
+  position: relative;
+  left: 68%;
 }
 
-.add{
-        margin-top: 25%;
-        border: 3px solid white;
-        width: 40%;
-        padding: 10px;
-        align-items: center;
-        border-radius: 10px;
-        display: grid;
-        margin-left: 5%;
-        justify-content: center;
-
-    }
-
-
-.do, .time, .place, .date{
-    font-size: 1em;
-    outline: none;
-    border: none;
-    border-radius: 3px;
+.add {
+  margin-top: 25%;
+  border: 3px solid white;
+  width: 40%;
+  padding: 10px;
+  align-items: center;
+  border-radius: 10px;
+  display: grid;
+  margin-left: 5%;
+  justify-content: center;
 }
 
-.time, .place, .date{
-    margin: 0 10px 0 10px;
-    text-align: center;
+.do,
+.time,
+.place,
+.date {
+  font-size: 1em;
+  outline: none;
+  border: none;
+  border-radius: 3px;
 }
 
-.do{
-   padding-left: 10px;
-   width: 100%;
-   margin-bottom: 3vh;
-   margin-top: 20px;
+.time,
+.place,
+.date {
+  margin: 0 10px 0 10px;
+  text-align: center;
 }
 
-
-.tbname{
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 2%;
+.do {
+  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 3vh;
+  margin-top: 20px;
 }
 
-.btn{
-    margin-top: 30px;
-    padding: 10px;
-    border: 1px solid aqua;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 10px;
-    color: aqua;
-    width: 30%;
-    margin-bottom: 2%;
+.tbname {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2%;
 }
 
-.btn:active{
-    background-color: aqua;
-    color: white;
+.btn {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid aqua;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  color: aqua;
+  width: 30%;
+  margin-bottom: 2%;
 }
 
-th, td{
-    text-align: center;
+.btn:active {
+  background-color: aqua;
+  color: white;
 }
 
-td{
-    padding: 0 5px 0 5px;
+th,
+td {
+  text-align: center;
 }
 
-.btn-mod{
-    background-color: red;
-    border: 1px solid white;
-    font-weight: bold;
-    border-radius: 3px;
-    color: white;
-    position: relative;
-    margin: 5px 0 5px 0;
+td {
+  padding: 0 5px 0 5px;
 }
 
-.btn-mod:active{
-    background-color: white;
-    color: red;
+.btn-mod {
+  background-color: yellow;
+  border: 1px solid white;
+  font-weight: bold;
+  border-radius: 3px;
+  color: orange;
+  position: relative;
+  margin: 5px 5px 5px 0;
+  padding: 3px;
 }
 
-.btnModal{
-    position: relative;
-    left: 0%;
+.btn-mod:active {
+  background-color: yellow;
+  color: yellow;
 }
 
-.btn-add{
-    display: flex;
-    justify-content: center;
+.btn-del {
+  background-color: red;
+  border: 1px solid white;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  position: relative;
+  margin: 5px px 5px 0px;
+  padding: 3px;
+}
+
+.btn-del:active {
+  background-color: white;
+  color: red;
+}
+
+.btnModal {
+  position: relative;
+  left: 0%;
+}
+
+.btn-add {
+  display: flex;
+  justify-content: center;
+}
+
+.time-date-form-edit {
+  display: flex;
+}
+
+.time-edit,
+.date-edit {
+  margin: 5px;
 }
