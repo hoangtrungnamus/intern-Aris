@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 
 const AddTodo = () => {
   const { todos, setTodos } = useContext(TodoContext);
-  const [clearInput, setClearInput] = useState(false);
   const [newTodo, setNewTodo] = useState({
     id: uuidv4().toString(),
     does: "",

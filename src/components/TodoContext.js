@@ -13,7 +13,6 @@ export const TodoContextProvider = (props) => {
         newArrTodo.push(todos[i]);
       }
     }
-    console.log(newArrTodo);
     setTodos(newArrTodo);
   };
 
